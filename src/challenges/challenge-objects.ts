@@ -16,5 +16,6 @@ let laptop: { brand: string; year: number } = {
 let product1 = { brand: "prod1", price: 20 };
 let product2 = { brand: "prod2", price: 40 };
 let products: { brand: string; price?: number }[] = [product1, product2];
+// price has to be of type number
 //products.push({ brand: "prod3",price: "60" });
 products.push({ brand: "prod3" });
