@@ -9,4 +9,4 @@ function processInput(input: string | number): void {
   console.log(typeof input === "string" ? input.toUpperCase() : input * 2);
 }
 
-console.log(processInput("hello"));
+processInput("hello");

@@ -31,3 +31,31 @@ function sayHello(): void {
   console.log("Hello, Typescript!");
   // return "Hello, Typescript!";
 }
+
+// Object Parameters
+// Destructuring id
+function createEmployee({ id }: { id: number }): {
+  id: number;
+  isActive: boolean;
+} {
+  return { id, isActive: id % 2 === 0 };
+}
+const employee = createEmployee({ id: 1 });
+const employee2 = createEmployee({ id: 2 });
+
+// Object Parameters alternative
+// Naming object
+function createStudent(student: { id: number; name: string }): void {
+  console.log(`Welcome to the course ${student.name}`);
+}
+const newStudent = {
+  id: 1,
+  name: "John",
+  //email: "j@j.com",
+};
+createStudent(newStudent);
+
+// Excess Property Check gotcha
+//! If an inline object is passed as an argument, any properties that are not defined in the object will be complained about
+//? However, if a referenced object is passed as an argument, the properties that are not defined in the object will not be complained about i.e. line 51-55
+// createStudent({ id: 1, name: "John", age: 20 });
