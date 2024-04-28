@@ -8,6 +8,7 @@ import "./tutorial.ts";
 
 // challenges
 //import "./challenges/challenge-intro.ts";
+import "./challenges/challenge-functions.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
