@@ -10,3 +10,20 @@ function processInput(input: string | number): void {
 }
 
 processInput("hello");
+
+function processData(
+  input: string | number,
+  obj: { reverse: boolean } = { reverse: false }
+): string | number {
+  if (typeof input === "string") {
+    if (obj.reverse) {
+      return input.toUpperCase().split("").reverse().join("");
+    }
+    return input.toUpperCase();
+  } else {
+    return input * input;
+  }
+}
+console.log(processData("works"));
+console.log(processData("hellooo", { reverse: true }));
+console.log(processData(10));

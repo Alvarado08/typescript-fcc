@@ -2,7 +2,7 @@ import "./style.css";
 import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
-import "./tutorial.ts";
+//import "./tutorial.ts";
 // concepts
 //import "./concepts/unions.ts";
 
