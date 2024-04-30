@@ -30,3 +30,25 @@ function setTheme(t: Theme) {
 }
 
 setTheme("dark");
+
+// Intersection
+type Book = { id: number; name: string; price: number };
+// Method 1
+type DiscountedBook = Book & { discount: number };
+
+const book1: Book = { id: 1, name: "book1", price: 10 };
+const book2: Book = { id: 2, name: "book2", price: 20 };
+// Method 2
+const discountedBook: DiscountedBook = {
+  id: 3,
+  name: "book3",
+  price: 30,
+  discount: 10,
+};
+
+// Computed properties
+const propName = "age";
+type Animal = {
+  [propName]: number;
+};
+const tiger: Animal = { [propName]: 10 };
