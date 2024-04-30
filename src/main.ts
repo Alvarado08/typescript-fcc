@@ -3,12 +3,14 @@ import typescriptLogo from "./typescript.svg";
 import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
 //import "./tutorial.ts";
+
 // concepts
 //import "./concepts/unions.ts";
 
 // challenges
 //import "./challenges/challenge-intro.ts";
-import "./challenges/challenge-functions.ts";
+//import "./challenges/challenge-functions.ts";
+import "./challenges/challenge-type-alias.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
