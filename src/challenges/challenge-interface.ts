@@ -60,3 +60,13 @@ function getEmployee(): Person2 | DogOwner2 | Manager3 {
 }
 
 const employee4: Person2 | DogOwner2 | Manager3 = getEmployee();
+
+// type predicate "is"
+// special return that returns a boolean and asserts an argument is of a certain type
+function isManager(obj: Person2 | DogOwner2 | Manager3): obj is Manager3 {
+  return "managePeople" in obj;
+}
+
+if (isManager(employee4)) {
+  employee4.managePeople();
+}
