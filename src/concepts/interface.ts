@@ -46,3 +46,60 @@ const deepWork: Magazine = {
 
 deepWork.printTitle();
 deepWork.printPrice("The price is: ");
+
+// Interface merging
+interface Person {
+  name: string;
+  getDetails(): string;
+}
+
+interface Person {
+  age: number;
+}
+
+const person: Person = {
+  name: "John",
+  age: 27,
+  getDetails() {
+    return `${this.name} is ${this.age} years old`;
+  },
+};
+console.log(person.getDetails());
+
+// Interface extending
+interface Employee2 extends Person {
+  id: number;
+}
+
+const employee3: Employee2 = {
+  id: 1,
+  name: "Sue",
+  age: 27,
+  getDetails() {
+    return `${this.name} id is ${this.id}`;
+  },
+};
+
+interface DogOwner {
+  dogName: string;
+  getDogName(): void;
+}
+
+interface Manager2 extends Person, DogOwner {
+  managePeople(): void;
+}
+
+const manager: Manager2 = {
+  name: "Bob",
+  age: 30,
+  dogName: "Scooby",
+  getDetails() {
+    return `${this.name} is ${this.age} years old`;
+  },
+  getDogName() {
+    console.log(this.dogName);
+  },
+  managePeople() {
+    console.log("Manages 20 people");
+  },
+};
