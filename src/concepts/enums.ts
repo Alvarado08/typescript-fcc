@@ -37,3 +37,23 @@ function getServerResponse(): ServerResponse {
 
 const response: ServerResponse = getServerResponse();
 console.log(response);
+
+// Assertion
+enum Status {
+  Pending = "Pending",
+  Declined = "Declined",
+}
+
+type User5 = {
+  name: string;
+  status: Status;
+};
+
+// save Status.Pending in DB as a string
+// retrive string from DB
+const statusValue = "Pending";
+
+const user5: User5 = {
+  name: "Helen",
+  status: statusValue as Status,
+};
