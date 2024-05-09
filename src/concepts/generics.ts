@@ -41,3 +41,50 @@ function createArray<T>(length: number, value: T): T[] {
 
 let arrayStrings = createArray<string>(10, "Hello");
 let arrayNumbers = createArray<number>(10, 10);
+
+function pair<T, U>(param1: T, param2: U): [T, U] {
+  return [param1, param2];
+}
+
+function processValue<T extends string | number>(value: T): T {
+  return value;
+}
+
+type Student5 = {
+  name: string;
+  age: number;
+};
+
+type Product = {
+  name: string;
+  price: number;
+};
+
+const student5: Student5 = {
+  name: "Josh",
+  age: 20,
+};
+
+const product: Product = {
+  name: "Book",
+  price: 10,
+};
+
+function printName<T extends { name: string }>(input: T): void {
+  console.log(input.name);
+}
+
+printName(student5);
+printName(product);
+
+interface StoreData<T = any> {
+  data: T[];
+}
+
+const storeNums: StoreData<number> = {
+  data: [1, 2, 3],
+};
+
+const storeSomething: StoreData = {
+  data: ["Hello", false],
+};
