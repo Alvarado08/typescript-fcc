@@ -6,13 +6,14 @@ import { setupCounter } from "./counter.ts";
 
 //concepts
 //import "./concepts/unions.ts";
-// import "./concepts/enums.ts";
+//import "./concepts/enums.ts";
+import "./concepts/fetch.ts";
 
 //challenges
 //import "./challenges/challenge-intro.ts";
 //import "./challenges/challenge-functions.ts";
 //import "./challenges/challenge-type-alias.ts";
-import "./challenges/challenge-enums.ts";
+//import "./challenges/challenge-enums.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
