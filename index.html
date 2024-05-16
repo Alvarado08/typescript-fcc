@@ -3,12 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + TS</title>
   </head>
   <body>
     <div id="app"></div>
-    <button class="btn">Click me</button>
+    <main class="flex items-center justify-center min-h-screen">
+      <div>
+        <h1 class="text-3xl font-bold mb-3 text-center">Tasks</h1>
+        <article>
+          <form class="form flex gap-3">
+            <input
+              type="text"
+              placeholder="What's on your mind?"
+              class="input input-bordered w-full max-w-xs"
+            />
+            <button class="btn btn-primary">Add</button>
+          </form>
+        </article>
+        <ul class="list my-3"></ul>
+      </div>
+    </main>
     <script type="module" src="/src/tasks.ts"></script>
   </body>
 </html>
