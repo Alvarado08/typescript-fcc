@@ -1,12 +1,12 @@
 //import Props from "./starter/02-props";
 //import Events from "./starter/04-events";
-import Challenge from "./starter/05-challenge";
+//import Challenge from "./starter/05-challenge";
+import Fetch from "./starter/06-fetch-data";
 
 function App() {
   return (
     <>
-      <Challenge type="basic" name="John" />
-      <Challenge type="advanced" name="John" email="X5k9A@example.com" />
+      <Fetch />
     </>
   );
 }
